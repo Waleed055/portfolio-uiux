@@ -1,0 +1,13 @@
+.experience-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .experience-page {
+        height: auto;
+        padding-bottom: 50px;
+    }
+}

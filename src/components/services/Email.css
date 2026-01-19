@@ -1,0 +1,90 @@
+/* Main card styling */
+.email-card {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 130px;
+    width: 90%;
+    max-width: 440px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect: Turns green like the image */
+.email-card:hover {
+    background-color: #C7D3B6;
+    /* transform: scale(1.02); Optional slight scale */
+}
+
+/* Text styling */
+.email-card p {
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+}
+
+/* Button styling */
+/* Button styling */
+.email-button {
+    background-color: #C7D3B6;
+    /* Default matches theme or transparent? */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    /* Removed border */
+    transition: background-color 0.3s ease;
+    width: 100px;
+    /* Fixed width for pill shape */
+    height: 30px;
+}
+
+/* Default state: Text visible, Image hidden */
+.email-button span {
+    display: block;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.email-button img {
+    height: 16px;
+    width: auto;
+    display: none;
+    /* Hidden by default */
+}
+
+/* When card is hovered, button turns white */
+.email-card:hover .email-button {
+    background-color: #F4F4EF;
+    /* Off-white from image */
+}
+
+/* Hover State: Text hidden, Image visible */
+.email-card:hover .email-button span {
+    display: none;
+}
+
+.email-card:hover .email-button img {
+    display: block;
+}
+
+/* Button specific hover */
+.email-button:hover {
+    /* brightness or scale? */
+    transform: scale(1.05);
+}

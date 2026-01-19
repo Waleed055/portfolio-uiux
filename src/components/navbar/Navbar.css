@@ -1,0 +1,266 @@
+.navbar-container {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Wrapper to stack the two divs */
+.nav-container {
+    position: relative;
+    display: grid;
+    grid-template-areas: "stack";
+    width: 75%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* Common sizing and formatting for both layers */
+.navbar-pill,
+.navbar-back {
+    grid-area: stack;
+    width: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: 'Grandstander', cursive;
+    font-weight: 600;
+}
+
+/* The Top Layer */
+.navbar-pill {
+    position: relative;
+    z-index: 20;
+    background: transparent;
+    border: 1.5px solid #000000;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    transition: transform 0.3s ease;
+    left: 20px;
+}
+
+/* The Back Layer */
+.navbar-back {
+    position: absolute;
+    /* Ensures it matches the container height */
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 10;
+    background-color: #C7D3B6;
+    border: none;
+    transform: translate(8px, 8px);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Interaction: Align back layer precisely like Resume button */
+.nav-container:hover .navbar-back {
+    transform: translate(20px, 0);
+}
+
+/* Logo and Link Styling */
+.navbar-logo {
+    color: #000000;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-links a {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.navbar-links a:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+.navbar-links a:active {
+    transform: scale(0.95);
+}
+
+.navbar-header {
+    display: contents;
+    /* Default for desktop */
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .nav-container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        width: 90%;
+    }
+
+    .navbar-pill {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 25px;
+        height: auto;
+        overflow: hidden;
+        /* Need background color or blur? If transparent, content below shows */
+        background: rgba(255, 255, 255, 0.95);
+        /* Semi-transparent white or similar */
+        backdrop-filter: blur(10px);
+        left: 0;
+    }
+
+    .navbar-pill.active {
+        background-color: #F4F4EF;
+    }
+
+    .navbar-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        margin-top: 0;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .navbar-links.open {
+        max-height: 400px;
+        opacity: 1;
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 30;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #000000;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .bar.open:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .bar.open:nth-child(2) {
+        opacity: 0;
+    }
+
+    .bar.open:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    .navbar-logo {
+        font-size: 24px;
+        width: auto;
+        text-align: left;
+    }
+
+    .navbar-back {
+        /* On mobile, back layer needs to adjust or hide if pill expands */
+        /* Let's keep it simple and just have it behind */
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar-container {
+        top: 20px;
+    }
+
+    .nav-container {
+        width: 95%;
+    }
+
+    .navbar-pill {
+        padding: 10px 20px;
+    }
+
+    .navbar-logo {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 425px) {
+    .navbar-container {
+        top: 15px;
+    }
+
+    .nav-container {
+        width: 90%;
+        /* Reduced from implicit 95% to remove scrollbar */
+    }
+
+    .navbar-pill {
+        padding: 10px 15px;
+    }
+
+    .navbar-logo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-container {
+        width: 85%;
+        /* Strictly contained */
+    }
+
+    .navbar-pill {
+        padding: 5px 10px;
+    }
+
+    .navbar-back {
+        transform: translate(2px, 2px);
+        /* Minimal offset */
+    }
+
+    .navbar-logo {
+        font-size: 15px;
+    }
+
+    .bar {
+        width: 16px;
+    }
+}

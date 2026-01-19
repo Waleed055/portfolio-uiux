@@ -1,0 +1,99 @@
+.experience-header {
+    display: flex;
+    justify-content: center;
+    /* Centered visually, but image pulls right */
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    margin-bottom: 50px;
+}
+
+.experience-title {
+    font-family: 'Grandstander', cursive;
+    /* Ensure the font is imported */
+    font-weight: 600;
+    /* SemiBold */
+    font-style: normal;
+    /* SemiBold is usually normal style */
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.experience-img-container {
+    position: absolute;
+    right: 50px;
+    /* Adjusted to be inside the 100% width comfortably */
+    top: -100px;
+}
+
+@media (max-width: 1024px) {
+    .experience-img-container {
+        position: relative;
+        right: auto;
+        top: -20px;
+        margin-bottom: -50px;
+        /* Pull it back up slightly if needed or let it sit normally */
+        /* Or keep absolute but move it way up/down, but relative is safer for no overlap */
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .experience-header {
+        flex-direction: column-reverse;
+        /* Put image on top of title or bottom? screenshot suggests next to/below. Let's try column to stack safely */
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .experience-img {
+        width: 120px;
+        /* Smaller image */
+    }
+}
+
+@media (max-width: 900px) {
+    .experience-img-container {
+        /* Reset or adjust if needed, but 1024 rule might cover it */
+        top: auto;
+    }
+
+    .experience-img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .experience-img-container {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin-top: 20px;
+    }
+
+    .experience-img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 640px) {
+    .experience-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 425px) {
+    .experience-title {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,239 @@
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    padding-left: 20px;
+    /* border: 2px solid red; */
+    margin-top: -30px;
+}
+
+.hero-subtitle {
+    font-family: 'Grandstander', cursive;
+    font-weight: 500;
+    /* Medium */
+    font-size: 20px;
+    line-height: 1;
+    /* 100% */
+    letter-spacing: 0;
+    color: #000000;
+    margin-top: -100px;
+    margin-bottom: 10px;
+    margin-right: 205px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 25px;
+    font-family: var(--font-main);
+    letter-spacing: 2px;
+    perspective: 500px;
+}
+
+.dot {
+    color: var(--text-main);
+}
+
+.hero-description {
+    font-family: 'Grandstander', cursive;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #8B8B8B;
+    line-height: 1.4;
+    margin-bottom: 50px;
+    max-width: 350px;
+    padding-left: 5px;
+}
+
+.hero-cta {
+    margin-bottom: 80px;
+    display: flex;
+    padding-left: 5px;
+}
+
+.resume-btn-container {
+    position: relative;
+    display: grid;
+    grid-template-areas: "stack";
+    /* width: fit-content; */
+    /* Remove width constraint or set specific width if needed */
+    cursor: pointer;
+    left: 40px;
+    top: -20px;
+}
+
+.resume-btn-pill,
+.resume-btn-back {
+    grid-area: stack;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    font-family: 'Grandstander', cursive;
+    font-weight: 600;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.resume-btn-pill {
+    position: relative;
+    z-index: 20;
+    background: transparent;
+    border: 1.5px solid #000000;
+    color: #000000;
+    transition: transform 0.3s ease;
+    left: 20px;
+}
+
+.resume-btn-back {
+    position: relative;
+    z-index: 10;
+    background-color: #C7D3B6;
+    transform: translate(8px, 8px);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Interaction */
+.resume-btn-container:hover .resume-btn-back {
+    transform: translate(20px, 0);
+}
+
+.hero-social {
+    font-family: 'Grandstander', cursive;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000000;
+    padding-left: 5px;
+    margin-top: -50px;
+}
+
+.hero-social a {
+    color: #000000;
+    position: relative;
+    text-decoration: none;
+}
+
+.hero-social a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hero-left {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle,
+    .hero-description,
+    .hero-cta,
+    .hero-social {
+        padding-left: 0;
+    }
+
+    .hero-subtitle {
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .hero-description {
+        margin: 0 auto 40px;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-social {
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    .resume-btn-container {
+        left: 0;
+    }
+
+    .resume-btn-pill {
+        left: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .resume-btn-pill,
+    .resume-btn-back {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-title {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .hero-social {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .resume-btn-back {
+        transform: translate(4px, 4px);
+        /* Smaller shadow offset */
+    }
+
+    .resume-btn-container:hover .resume-btn-back {
+        transform: translate(10px, 0);
+        /* Smaller hover effect */
+    }
+}
+
+.hover-text {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-text:hover {
+    transform: scale(2) rotateX(10deg) rotateY(5deg);
+}

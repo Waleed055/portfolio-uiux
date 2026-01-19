@@ -1,0 +1,120 @@
+.services-list-card {
+
+    border: 1px solid #000000;
+    /* Match border style */
+    border-radius: 20px;
+    padding: 2rem;
+    height: 186px;
+    /* width:670px; */
+    box-shadow: 0px 4px 4px 0px #00000040;
+
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.10s ease;
+}
+
+.services-list-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative blobs similar to the design */
+.services-list-card::before,
+.services-list-card::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: #C7D3B6;
+    /* opacity: 0.5; */
+    z-index: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease;
+}
+
+.services-list-card::before {
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+}
+
+.services-list-card::after {
+    bottom: -30px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+}
+
+/* Hover effect: Expand blobs to cover background */
+.services-list-card:hover::before {
+    transform: scale(20);
+    /* sufficient to cover */
+    opacity: 1;
+    /* Make it solid or fully opaque as requested "cover the entire card" implies color fill */
+}
+
+/* We only need one to expand, or both. Expanding both might create overlapping layers. 
+   Let's expand the top-right one mainly, or both for a merged effect. 
+   If both expand, they will merge. */
+.services-list-card:hover::after {
+    transform: scale(15);
+    opacity: 1;
+}
+
+.services-list-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    /* Ensure text is above blobs */
+}
+
+.services-list-card li {
+    font-family: 'Grandstander', cursive;
+    /* Ensure the font is imported */
+    font-weight: 400;
+    /* Medium */
+    font-style: normal;
+    /* Medium style is usually normal */
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-bottom: .3rem;
+    /* padding-left: 1.5rem; */
+    position: relative;
+    transition: color 0.3s ease;
+
+}
+
+.services-list-card li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--text-main);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Optional: Change text color if needed for contrast, though black on light green is usually fine. */
+
+@media (max-width: 768px) {
+    .services-list-card {
+        height: auto;
+        min-height: 186px;
+    }
+}
+
+@media (max-width: 640px) {
+    .services-list-card {
+        padding: 1.5rem;
+    }
+
+    .services-list-card li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 425px) {
+    .services-list-card li {
+        font-size: 16px;
+    }
+}

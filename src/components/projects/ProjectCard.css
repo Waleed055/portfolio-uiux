@@ -1,0 +1,161 @@
+.project-card {
+  background-color: #C7D3B6;
+  /* Light sage green matching screenshot */
+  border-radius: 30px;
+  /* More rounded */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 320px;
+  width: 100%;
+  max-width: 340px;
+
+  /* On mobile screens, ensure it doesn't force width and centers content */
+  @media (max-width: 480px) {
+    max-width: 100%;
+    padding: 20px;
+    height: auto;
+    /* Allow height to expand for centered content */
+    min-height: 400px;
+  }
+
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .project-info {
+    text-align: center;
+    width: 100%;
+  }
+
+  .project-links {
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .project-image-container {
+    width: 90%;
+    margin-left: 0;
+    margin-top: -20px;
+    /* Pull image up to overlap under icons */
+    justify-content: center;
+  }
+
+  .project-image {
+    transform: rotate(0deg);
+    /* Remove rotation for clean mobile look */
+    height: auto;
+    max-height: 200px;
+  }
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #767676B0;
+  /* The requested grey overlay */
+  z-index: 10;
+  transition: transform 0.4s ease-in-out;
+}
+
+.project-card:hover .card-overlay {
+  transform: translateY(-100%);
+  /* Moves up like a shutter */
+}
+
+/* Ensure content stays below overlay initially but doesn't move */
+/* relative z-index if needed, but overlay z-index: 10 covers them by default if they are static/relative */
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  margin: 0 0 5px 0;
+  color: #000000;
+  font-weight: 700;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  color: #000000;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: -20px;
+  /* margin-bottom: 20px; */
+  position: relative;
+  z-index: 5;
+  /* Ensure links are clickable/visible over overlay if needed, though they are inside project-info */
+}
+
+.icon-container {
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+}
+
+.icon-container img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.project-image-container {
+  width: 70%;
+  /* height: 20vh; */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: -30px;
+  margin-left: 30px;
+  /* border: 1px solid #000000; */
+  /* Push to bottom */
+  /* padding-bottom: 20px; */
+}
+
+.project-image {
+  width: 100%;
+  height: 50%;
+  /* Replaces 25vh to fit in card properly */
+  min-height: 160px;
+  /* Ensure a minimum size */
+  object-fit: cover;
+  /* or contain, depending on image */
+  border-radius: 12px;
+  transform: rotate(10deg) translateY(10px);
+  /* Slightly less rotation, push down slightly */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  border: 1px solid #000000;
+}
+
+.project-card:hover .project-image {
+  transform: rotate(0deg) translateY(0);
+  /* Animate on hover */
+}

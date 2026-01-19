@@ -1,0 +1,171 @@
+/* Container for the layered effect */
+.service-tools-container {
+    position: relative;
+    display: grid;
+    grid-template-areas: "stack";
+    cursor: pointer;
+
+    /* margin: 0 auto; Removed auto margin to let it fit in flow, can add if needed */
+}
+
+/* Common sizing and formatting */
+.service-tools-pill,
+.service-tools-back {
+    grid-area: stack;
+    width: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    /* Removed fixed height so it adapts to content */
+}
+
+/* The Back Layer */
+.service-tools-back {
+    /* Removed position: absolute to let it be a grid item */
+    z-index: 10;
+    background-color: #C7D3B6;
+    border: none;
+    transform: translate(8px, 8px);
+    transition: transform 0.3s ease;
+    height: 100%;
+    /* Ensure it fills the grid area */
+}
+
+/* The Top Layer (Pill) */
+.service-tools-pill {
+    position: relative;
+    z-index: 20;
+    background: transparent;
+    border: 1.5px solid #000000;
+    display: flex;
+    flex-direction: column;
+    /* Stack rows vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+    gap: 1rem;
+    /* Space between rows */
+    transition: transform 0.3s ease;
+    left: 20px;
+}
+
+.tools-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* Space between icons in a row */
+    width: 100%;
+}
+
+/* Hover Interaction: Align back layer precisely like Navbar */
+.service-tools-container:hover .service-tools-back {
+    transform: translate(20px, 0);
+}
+
+/* Optional: Replicate the 'floating/scattered' look */
+/* Optional: Replicate the 'floating/scattered' look */
+.tool-icon {
+    width: 60px;
+    /* Adjust size as needed */
+    height: 60px;
+    transition: transform 0.8s ease;
+}
+
+.tool-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
+}
+
+.tool-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Specific positioning variations if we want them not just in a row */
+/* Specific positioning variations */
+.tool-icon.ps {
+    transform: rotate(-10deg);
+}
+
+.tool-icon.pr {
+    transform: rotate(5deg);
+}
+
+.tool-icon.figma {
+    transform: rotate(-5deg);
+}
+
+.tool-icon.ae {
+    transform: rotate(10deg);
+}
+
+.tool-icon.ai {
+    transform: rotate(15deg);
+}
+
+/* Move icons slightly and rotate 360 when container is hovered */
+.service-tools-container:hover .tool-icon.ps {
+    transform: rotate(350deg) translateY(-10px);
+}
+
+.service-tools-container:hover .tool-icon.pr {
+    transform: rotate(365deg) translateY(-10px);
+}
+
+.service-tools-container:hover .tool-icon.figma {
+    transform: rotate(355deg) translateY(-10px);
+}
+
+.service-tools-container:hover .tool-icon.ae {
+    transform: rotate(370deg) translateY(-10px);
+}
+
+.service-tools-container:hover .tool-icon.ai {
+    transform: rotate(375deg) translateY(-10px);
+}
+
+@media (max-width: 768px) {
+
+    .service-tools-pill,
+    .service-tools-back {
+        height: auto;
+        min-height: 186px;
+    }
+
+    .service-tools-pill {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .service-tools-pill,
+    .service-tools-back {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+
+    .tool-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 !important;
+        /* Reset margins for grid */
+        transform: none !important;
+        /* Reset transforms */
+    }
+
+    .service-tools-container:hover .tool-icon {
+        transform: scale(1.1) !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .tool-icon {
+        width: 40px;
+        height: 40px;
+       
+    }
+}

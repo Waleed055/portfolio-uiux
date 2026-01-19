@@ -1,0 +1,126 @@
+.service-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.service-header-accent {
+    width: 9px;
+    height: 48px;
+    background-color: #000000;
+    border-radius: 10px;
+    position: absolute;
+    animation: service-accent-move 4s infinite ease-in-out;
+}
+
+.service-header-container h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    /* Initial color from AboutHeader logic matches the animation midpoint/start */
+    color: #C7D3B6;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    animation: service-text-color-move 4s infinite ease-in-out;
+}
+
+@keyframes service-accent-move {
+
+    0%,
+    100% {
+        transform: translateX(-110px);
+        background-color: #000000;
+    }
+
+    50% {
+        transform: translateX(110px);
+        background-color: #C7D3B6;
+    }
+}
+
+@keyframes service-text-color-move {
+
+    0%,
+    100% {
+        color: #000000;
+    }
+
+    40%,
+    60% {
+        color: #C7D3B6;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-header-container h2 {
+        font-size: 2.5rem;
+    }
+
+    .service-header-accent {
+        height: 36px;
+    }
+
+    @keyframes service-accent-move {
+
+        0%,
+        100% {
+            transform: translateX(-80px);
+            background-color: #000000;
+        }
+
+        50% {
+            transform: translateX(80px);
+            background-color: #C7D3B6;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .service-header-container h2 {
+        font-size: 2rem;
+    }
+
+    .service-header-accent {
+        height: 30px;
+    }
+
+    @keyframes service-accent-move {
+
+        0%,
+        100% {
+            transform: translateX(-60px);
+            background-color: #000000;
+        }
+
+        50% {
+            transform: translateX(60px);
+            background-color: #C7D3B6;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .service-header-container h2 {
+        font-size: 1.8rem;
+    }
+
+    @keyframes service-accent-move {
+
+        0%,
+        100% {
+            transform: translateX(-50px);
+            background-color: #000000;
+        }
+
+        50% {
+            transform: translateX(50px);
+            background-color: #C7D3B6;
+        }
+    }
+}

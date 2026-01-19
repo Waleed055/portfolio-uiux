@@ -1,0 +1,122 @@
+.about-contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 140px;
+
+}
+
+.contact-btn-wrapper {
+    position: relative;
+    width: 250px;
+    height: 60px;
+    /* Wrapper acts as the card boundary */
+    border: 1px solid #000000;
+    border-radius: 4px;
+    /* Slight rounded corners for the card itself */
+    overflow: hidden;
+    /* Clips the blobs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F4EF;
+    /* Off-white background */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.contact-btn-wrapper:hover {
+    transform: scale(1.02);
+}
+
+/* Blobs expand on hover */
+.contact-btn-wrapper:hover .blob {
+    transform: scale(15);
+    /* Large enough to cover the card */
+    border-radius: 50%;
+}
+
+/* Text styling and transitions */
+.contact-text {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #000000;
+    z-index: 5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn-wrapper:hover .contact-text {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Icons container styling */
+.contact-icons {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+    /* Slight delay */
+}
+
+.contact-btn-wrapper:hover .contact-icons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Icon images */
+.contact-icons img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.2);
+}
+
+.contact-large-btn {
+    display: none;
+}
+
+.blob {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #C7D3B6;
+    /* Light green/sage from previous context */
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.4s ease, border-radius 0.4s ease;
+}
+
+.blob-1 {
+    /* Bottom Left */
+    bottom: -15px;
+    left: -15px;
+    /* Organic shape */
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+.blob-2 {
+    /* Top Right */
+    top: -20px;
+    right: -10px;
+    width: 60px;
+    height: 60px;
+    /* Organic shape */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+@media (max-width: 768px) {
+    .about-contact {
+        margin-left: 0;
+    }
+}

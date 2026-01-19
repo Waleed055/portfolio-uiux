@@ -1,0 +1,54 @@
+.about-description {
+    width: 120%;
+    margin-left: 200px;
+
+    margin-bottom: 20px;
+    text-align: justify;
+    /* border: 2px solid red; */
+}
+
+.about-description p {
+    font-family: 'Grandstander', cursive;
+    /* Ensure the font is imported */
+    font-weight: 100;
+    /* Thin */
+    font-style: normal;
+    /* Thin style is usually normal */
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.about-description strong {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .about-description {
+        width: 100%;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-description {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .about-description p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-description p {
+        font-size: 1rem;
+    }
+}

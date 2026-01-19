@@ -1,0 +1,171 @@
+.hero-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    z-index: 10;
+    margin-top: -110px;
+}
+
+.image-container {
+    position: relative;
+    width: 470px;
+    height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-bg-circle {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    /* Made square for a perfect circle */
+    background-color: #C7D3B6;
+    border-radius: 50%;
+    overflow: hidden;
+    /* This clips the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.profile-image {
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensure the whole subject is visible */
+    position: relative;
+    z-index: 2;
+    transform: scale(1.1);
+    /* Slight zoom if needed to fill more space, or keep at 1 */
+}
+
+
+.stylized-role {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #949b8b;
+    position: relative;
+    font-weight: bold;
+    bottom: 40px;
+    /* z-index: 3; */
+    /* opacity: 0.8; */
+    letter-spacing: 2px;
+    /* font-weight: 900; */
+    /* white-space: nowrap; */
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .image-container {
+        width: 416px;
+        /* Scaled down ~85% */
+        height: 500px;
+    }
+
+    .image-bg-circle {
+        width: 380px;
+        height: 380px;
+    }
+
+    .hero-right {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .image-container {
+        width: 375px;
+        height: 450px;
+    }
+
+    .image-bg-circle {
+        width: 340px;
+        height: 340px;
+    }
+
+    .stylized-role {
+        font-size: 3.5rem;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-right {
+        margin-top: 40px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        width: 290px;
+        height: 350px;
+    }
+
+    .image-bg-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .stylized-role {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: rotate(-5deg);
+        margin-top: 20px;
+        font-size: 3rem;
+        width: auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .image-container {
+        width: 250px;
+        height: 300px;
+    }
+
+    .image-bg-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .stylized-role {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .image-container {
+        width: 220px;
+        height: 280px;
+    }
+
+    .image-bg-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .stylized-role {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .image-container {
+        width: 180px;
+        height: 240px;
+    }
+
+    .image-bg-circle {
+        width: 160px;
+        height: 160px;
+    }
+}

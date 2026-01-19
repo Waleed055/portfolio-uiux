@@ -1,0 +1,137 @@
+.experience-details-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* padding-bottom: 50px; */
+}
+
+/* Vertical line */
+.experience-details-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    /* Centered for large screens */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+
+
+    background-color: #949b8b;
+}
+
+.experience-item {
+    display: flex;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.experience-date {
+    width: 50%;
+    padding-right: 50px;
+    text-align: right;
+
+    color: #000000;
+
+    padding-top: 5px;
+    /* Align with title */
+    font-family: 'Grandstander', cursive;
+    /* Ensure the font is imported */
+    font-weight: 500;
+    /* Thin */
+    font-style: normal;
+    /* Thin style is usually normal */
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+
+.experience-content {
+    width: 50%;
+    padding-left: 50px;
+    font-family: 'Grandstander', cursive;
+    /* Ensure the font is imported */
+    font-weight: 500;
+    /* Light */
+    font-style: normal;
+    /* Light style is usually normal */
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #000000;
+    text-align: justify;
+}
+
+.company-name {
+    font-family: 'Grandstander', cursive;
+    /* Ensure the font is imported */
+    font-weight: 700;
+    /* Bold */
+    font-style: normal;
+    /* Bold is usually normal style */
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #949b8b;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.role-title {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #949b8b;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .experience-details-container::before {
+        display: none;
+        /* Remove vertical line on mobile */
+    }
+
+    .experience-item {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .experience-date {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 20px;
+        margin-bottom: 5px;
+        color: #949b8b;
+        /* Change color to match company on mobile for distinction or keep black */
+    }
+
+    .experience-content {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .company-name {
+        font-size: 28px;
+    }
+
+    .role-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .experience-content {
+        font-size: 18px;
+    }
+
+    .company-name {
+        font-size: 24px;
+    }
+}
