@@ -1,7 +1,8 @@
 import React from 'react';
 import ProjectCard from '../../components/projects/ProjectCard';
 import './Projects.css';
-import cardImage from '../../assets/tech.svg';
+// import cardImage from '../../assets/tech.svg';
+import cardImage from '../../assets/Senifone.png';
 import autoparts from '../../assets/autoparts.svg';
 import elgrocer from '../../assets/ELgrocer.svg';
 import lawyer from '../../assets/laywerAPP.svg';
