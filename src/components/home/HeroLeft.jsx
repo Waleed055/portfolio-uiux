@@ -4,7 +4,7 @@ import './HeroLeft.css';
 const HeroLeft = () => {
     return (
         <div className="hero-left">
-            <h3 className="hero-subtitle">Sr. Software Engineer</h3>
+            <h3 className="hero-subtitle">Sr. Graphic Designer</h3>
             <h1 className="hero-title">
                 {"Waleed Hassan".split("").map((char, index) => (
                     <span key={index} className="hover-text">{char === " " ? "\u00A0" : char}</span>
