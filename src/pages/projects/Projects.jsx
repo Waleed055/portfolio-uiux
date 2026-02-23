@@ -2,6 +2,12 @@ import React from 'react';
 import ProjectCard from '../../components/projects/ProjectCard';
 import './Projects.css';
 import cardImage from '../../assets/tech.svg';
+import autoparts from '../../assets/autoparts.svg';
+import elgrocer from '../../assets/ELgrocer.svg';
+import lawyer from '../../assets/laywerAPP.svg';
+import portfolio from '../../assets/portfolio.svg';
+import websiteImage from '../../assets/website.svg';
+
 const Projects = () => {
     // Dummy data array as requested
     const projectsData = [
@@ -13,33 +19,33 @@ const Projects = () => {
         },
         {
             id: 2,
-            title: 'Senifone Companion App',
-            downloads: '3M+ Downloads',
-            image: cardImage
+            title: 'AutoParts App',
+            downloads: 'UI/UX Design',
+            image: autoparts
         },
         {
             id: 3,
-            title: 'Senifone Companion App',
-            downloads: '3M+ Downloads',
-            image: cardImage
+            title: 'ELgrocer App',
+            downloads: 'UI/UX Design',
+            image: elgrocer
         },
         {
             id: 4,
-            title: 'Senifone Companion App',
-            downloads: '3M+ Downloads',
-            image: cardImage
+            title: 'Lawyer App',
+            downloads: 'UI/UX Design',
+            image: lawyer
         },
         {
             id: 5,
-            title: 'Senifone Companion App',
-            downloads: '3M+ Downloads',
-            image: cardImage
+            title: 'Portfolio Website',
+            downloads: 'Web Design',
+            image: portfolio
         },
         {
             id: 6,
-            title: 'Senifone Companion App',
-            downloads: '3M+ Downloads',
-            image: cardImage
+            title: 'Corporate Website',
+            downloads: 'Web Design',
+            image: websiteImage
         }
     ];
 

@@ -14,7 +14,7 @@ const AboutContact = () => {
                     <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                         <img src={linkedIn} alt="LinkedIn" />
                     </a>
-                    <a href="mailto:example@email.com" target="_blank" rel="noopener noreferrer">
+                    <a href="waleedhassan4311@gmail.com" target="_blank" rel="noopener noreferrer">
                         <img src={email} alt="Email" />
                     </a>
                 </div>

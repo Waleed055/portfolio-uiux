@@ -1,23 +1,17 @@
 .about-description {
-    width: 120%;
-    margin-left: 200px;
-
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
     text-align: justify;
-    /* border: 2px solid red; */
 }
 
 .about-description p {
     font-family: 'Grandstander', cursive;
-    /* Ensure the font is imported */
-    font-weight: 100;
-    /* Thin */
-    font-style: normal;
-    /* Thin style is usually normal */
-    font-size: 24px;
-    line-height: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
     letter-spacing: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: justify;
 }
 

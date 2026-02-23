@@ -1,6 +1,7 @@
 .services-section {
-    min-height: 100vh;
-    margin-top: 50px;
+    min-height: auto;
+    margin-top: 0;
+    padding: 80px 0;
     width: 100%;
 }
 

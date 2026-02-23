@@ -1,15 +1,15 @@
 .about-section {
-    min-height: 100vh;
+    min-height: auto;
     width: 100%;
     position: relative;
+    padding: 80px 0;
 }
 
 .about-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1600px;
-    /* Increased for 2560px optimization */
+    max-width: 1200px;
     margin: 0 auto;
 }
 

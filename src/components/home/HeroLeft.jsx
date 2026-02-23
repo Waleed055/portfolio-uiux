@@ -25,10 +25,12 @@ const HeroLeft = () => {
             </div>
 
             <div className="hero-social">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a> /
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Linkedin</a> /
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> /
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://github.com/Waleed055" target="_blank" rel="noopener noreferrer">Github</a> /
+                <a href="https://www.linkedin.com/in/waleed-hassan-b211901bb/" target="_blank" rel="noopener noreferrer">Linkedin</a> /
+                <a href="https://www.facebook.com/waleed.hassan.96995238" target="_blank" rel="noopener noreferrer">Facebook</a> /
+                <a href="https://www.instagram.com/waleeed_hasssan/" target="_blank" rel="noopener noreferrer">Instagram</a> /
+                <a href="https://www.fiverr.com/s/e6VmAK3" target="_blank" rel="noopener noreferrer">Fiverr</a> /
+                <a href="https://www.upwork.com/freelancers/~01db6ae7361e7f7552" target="_blank" rel="noopener noreferrer">Upwork</a>
             </div>
         </div>
     );
