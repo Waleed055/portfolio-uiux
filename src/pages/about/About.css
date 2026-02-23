@@ -30,3 +30,10 @@
         padding: 40px 15px;
     }
 }
+
+/* Fix for large screens (1600px to 2500px) */
+@media (min-width: 1600px) {
+    .about-section {
+        padding-top: 40px;
+    }
+}

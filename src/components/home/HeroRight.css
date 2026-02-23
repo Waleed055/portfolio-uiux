@@ -168,3 +168,12 @@
         height: 160px;
     }
 }
+
+/* Fix for large screens (1600px to 2500px) */
+@media (min-width: 1600px) {
+    .stylized-role {
+        position: relative;
+        bottom: 60px;
+        margin-bottom: -40px;
+    }
+}

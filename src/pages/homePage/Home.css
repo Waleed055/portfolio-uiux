@@ -214,3 +214,10 @@
         justify-content: center;
     }
 }
+
+/* Fix for large screens (1600px to 2500px) */
+@media (min-width: 1600px) {
+    .home-page {
+        margin-top: 0;
+    }
+}

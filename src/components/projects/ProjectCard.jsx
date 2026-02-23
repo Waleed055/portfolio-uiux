@@ -4,7 +4,7 @@ import playStoreIcon from '../../assets/playstore.svg';
 import appleIcon from '../../assets/apple.svg';
 import webIcon from '../../assets/web.svg';
 
-const ProjectCard = ({ title, downloads, image }) => {
+const ProjectCard = ({ title, downloads, image, androidLink, iosLink, webLink }) => {
   return (
     <div className="project-card">
       <div className="card-overlay"></div>
@@ -12,15 +12,21 @@ const ProjectCard = ({ title, downloads, image }) => {
         <h3>{title}</h3>
         <p>{downloads}</p>
         <div className="project-links">
-          <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" className="icon-container">
-            <img src={playStoreIcon} alt="Play Store" />
-          </a>
-          <a href="https://apple.com" target="_blank" rel="noopener noreferrer" className="icon-container">
-            <img src={appleIcon} alt="Apple Store" />
-          </a>
-          <a href="https://example.com" target="_blank" rel="noopener noreferrer" className="icon-container">
-            <img src={webIcon} alt="Web" />
-          </a>
+          {androidLink && androidLink !== '#' && (
+            <a href={androidLink} target="_blank" rel="noopener noreferrer" className="icon-container">
+              <img src={playStoreIcon} alt="Play Store" />
+            </a>
+          )}
+          {iosLink && iosLink !== '#' && (
+            <a href={iosLink} target="_blank" rel="noopener noreferrer" className="icon-container">
+              <img src={appleIcon} alt="Apple Store" />
+            </a>
+          )}
+          {webLink && webLink !== '#' && (
+            <a href={webLink} target="_blank" rel="noopener noreferrer" className="icon-container">
+              <img src={webIcon} alt="Web" />
+            </a>
+          )}
         </div>
       </div>
       <div className="project-image-container">
