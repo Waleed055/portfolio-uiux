@@ -14,18 +14,18 @@
 
 @media (max-width: 900px) {
     .contact-full-section {
-        margin-top: 150px;
+        margin-top: 50px;
     }
 }
 
 @media (max-width: 768px) {
     .contact-upper {
-        padding: 3rem 5%;
+        padding: 2rem 5%;
     }
 }
 
 @media (max-width: 640px) {
     .contact-full-section {
-        margin-top: 100px;
+        margin-top: 30px;
     }
 }

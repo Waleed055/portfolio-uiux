@@ -1,12 +1,26 @@
 #root {
+  overflow-x: hidden;
   width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 .page-container {
-  max-width: 1600px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* Removed fixed width to eliminate side gaps */
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 3rem;
+  /* Slightly more padding for ultra-wide screens */
   text-align: center;
+}
+
+.app-container {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 @media (max-width: 1024px) {

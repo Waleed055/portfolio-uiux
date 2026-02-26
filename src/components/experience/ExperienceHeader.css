@@ -1,12 +1,12 @@
 .experience-header {
     display: flex;
     justify-content: center;
-    /* Centered visually, but image pulls right */
     align-items: center;
     position: relative;
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 60px 0;
     margin-bottom: 50px;
 }
 
@@ -25,9 +25,8 @@
 
 .experience-img-container {
     position: absolute;
-    right: 50px;
-    /* Adjusted to be inside the 100% width comfortably */
-    top: -100px;
+    right: 0;
+    top: -60px;
 }
 
 @media (max-width: 1024px) {

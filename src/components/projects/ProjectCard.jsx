@@ -6,7 +6,7 @@ import webIcon from '../../assets/web.svg';
 
 const ProjectCard = ({ title, downloads, image, androidLink, iosLink, webLink }) => {
   return (
-    <div className="project-card">
+    <div className="project-card" data-aos="zoom-in" data-aos-duration="800">
       <div className="card-overlay"></div>
       <div className="project-info">
         <h3>{title}</h3>

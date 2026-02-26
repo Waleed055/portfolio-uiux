@@ -3,7 +3,7 @@ import './HeroLeft.css';
 
 const HeroLeft = () => {
     return (
-        <div className="hero-left">
+        <div className="hero-left" data-aos="fade-right">
             <h3 className="hero-subtitle">Sr. Graphic Designer</h3>
             <h1 className="hero-title">
                 {"Waleed Hassan".split("").map((char, index) => (
@@ -12,7 +12,7 @@ const HeroLeft = () => {
 
             </h1>
             <p className="hero-description">
-                Graphic Designer | Creating clean , impactful , and experience - driven visual designs.
+                Graphic Designer | Creating clean, impactful, and experience-driven visual designs.
             </p>
 
             <div className="hero-cta">

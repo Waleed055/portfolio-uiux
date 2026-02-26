@@ -4,7 +4,7 @@ import photo from '../../assets/cover image 1.svg';
 
 const HeroRight = () => {
     return (
-        <div className="hero-right">
+        <div className="hero-right" data-aos="fade-left">
             <div className="image-container">
                 <div className="image-bg-circle">
                     <img src={photo} alt="Waleed Hassan" className="profile-image" />

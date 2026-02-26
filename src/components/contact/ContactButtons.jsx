@@ -4,7 +4,7 @@ import emailIcon from '../../assets/email.svg';
 
 const ContactButtons = () => {
     return (
-        <div className="contact-buttons-container">
+        <div className="contact-buttons-container" data-aos="fade-up" data-aos-delay="200">
             <p className="get-in-touch-label">GET IN TOUCH</p>
             <p className="lets-build-label">Let's build something together :)</p>
 

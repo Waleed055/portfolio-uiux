@@ -12,7 +12,7 @@ const ServicesList = () => {
     ];
 
     return (
-        <div className="services-list-card">
+        <div className="services-list-card" data-aos="fade-left" data-aos-delay="100">
             <ul>
                 {services.map((service, index) => (
                     <li key={index}>{service}</li>

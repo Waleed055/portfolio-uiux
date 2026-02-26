@@ -4,7 +4,7 @@ import processImage from '../../assets/tech.svg'; // Placeholder for now
 
 const ServiceProcess = () => {
     return (
-        <div className="service-process-card">
+        <div className="service-process-card" data-aos="fade-right">
             <div className="process-content">
                 <p>
                     I deliver end-to-end design solutions—from concept and visual design to user experience and final handoff—ensuring seamless, impactful results aligned with your brand and business goals.

@@ -11,8 +11,10 @@
 
 .hero-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 150px;
+    /* Increased gap to spread content to edges more */
     position: relative;
     z-index: 10;
     width: 100%;
@@ -50,7 +52,7 @@
 
 .line-1 {
     width: 60%;
-    margin-left: -5%;
+    margin-left: 0;
     transform-origin: left center;
 }
 
@@ -91,6 +93,7 @@
 
     .line-1 {
         width: 80%;
+        margin-left: 0;
     }
 
     .line-2 {

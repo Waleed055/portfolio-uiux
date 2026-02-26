@@ -3,7 +3,7 @@ import './ServiceHeader.css';
 
 const ServiceHeader = () => {
     return (
-        <div className="service-header-container">
+        <div className="service-header-container" data-aos="fade-down">
             <div className="service-header-accent"></div>
             <h2>Services</h2>
         </div>

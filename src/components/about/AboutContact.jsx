@@ -5,7 +5,7 @@ import email from '../../assets/email.svg';
 
 const AboutContact = () => {
     return (
-        <div className="about-contact">
+        <div className="about-contact" data-aos="zoom-in" data-aos-delay="300">
             <div className="contact-btn-wrapper">
                 <div className="blob blob-1"></div>
                 <div className="blob blob-2"></div>

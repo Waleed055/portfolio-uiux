@@ -3,11 +3,11 @@
     flex-direction: column;
     margin-top: 50px;
     width: 100%;
-    max-width: 1400px;
-    margin-left: auto;
+    max-width: 1200px;
+    margin-left: -50px;
     margin-right: auto;
     position: relative;
-    /* padding-bottom: 50px; */
+    padding: 20px 0;
 }
 
 /* Vertical line */
@@ -15,7 +15,8 @@
     content: "";
     position: absolute;
     left: 50%;
-    /* Centered for large screens */
+    /* Back to symmetrical center */
+    /* Move line to 40% to reduce date column gap */
     top: 0;
     bottom: 0;
     width: 2px;
@@ -26,13 +27,21 @@
 
 .experience-item {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    opacity: 1;
 }
 
 .experience-date {
     width: 50%;
-    padding-right: 50px;
+    padding-right: 30px;
+    /* Tighter spacing to center line */
     text-align: right;
 
     color: #000000;
@@ -52,7 +61,8 @@
 
 .experience-content {
     width: 50%;
-    padding-left: 50px;
+    padding-left: 30px;
+    /* Tighter spacing to center line */
     font-family: 'Grandstander', cursive;
     /* Ensure the font is imported */
     font-weight: 500;
@@ -68,17 +78,18 @@
 
 .company-name {
     font-family: 'Grandstander', cursive;
-    /* Ensure the font is imported */
     font-weight: 700;
-    /* Bold */
-    font-style: normal;
-    /* Bold is usually normal style */
-    font-size: 36px;
-    line-height: 100%;
+    font-size: 32px;
+    line-height: 1.2;
     letter-spacing: 0;
-    color: #949b8b;
-    margin-bottom: 5px;
+    color: #000000;
+    margin-bottom: 10px;
     margin-top: 0;
+    transition: color 0.3s ease;
+}
+
+.experience-item:hover .company-name {
+    color: #949b8b;
 }
 
 .role-title {
@@ -90,6 +101,10 @@
 }
 
 @media (max-width: 768px) {
+    .experience-details-container {
+        margin-left: 0;
+    }
+
     .experience-details-container::before {
         display: none;
         /* Remove vertical line on mobile */
@@ -133,5 +148,12 @@
 
     .company-name {
         font-size: 24px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .experience-details-container {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

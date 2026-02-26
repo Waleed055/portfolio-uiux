@@ -3,7 +3,7 @@ import './AboutDescription.css';
 
 const AboutDescription = () => {
     return (
-        <div className="about-description">
+        <div className="about-description" data-aos="fade-up" data-aos-delay="100">
             <p>
                 I am a <strong>Graphic Designer</strong> specializing in crafting visually engaging and strategy-driven design solutions that help brands stand out and communicate effectively.
             </p>

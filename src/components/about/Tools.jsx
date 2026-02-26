@@ -8,7 +8,7 @@ import premierePro from '../../assets/premierePro.svg';
 
 const Tools = () => {
     return (
-        <div className="tools-section">
+        <div className="tools-section" data-aos="fade-up" data-aos-delay="200">
             <div className="tools-container">
                 <div className="tool-card figma">
                     <img src={figma} alt="Figma" />

@@ -8,7 +8,7 @@ import premierePro from '../../assets/premierePro.svg';
 
 const ServiceTools = () => {
     return (
-        <div className="service-tools-container">
+        <div className="service-tools-container" data-aos="zoom-in" data-aos-delay="200">
             <div className="service-tools-back"></div>
             <div className="service-tools-pill">
                 <div className="tools-row top-row">

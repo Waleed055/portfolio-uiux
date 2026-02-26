@@ -4,7 +4,7 @@ import men from '../../assets/men.svg';
 
 const ExperienceHeader = () => {
     return (
-        <div className="experience-header">
+        <div className="experience-header" data-aos="fade-right">
             <h2 className="experience-title">Professional Experience</h2>
             <div className="experience-img-container">
                 <img src={men} alt="Working Figure" className="experience-img" />
